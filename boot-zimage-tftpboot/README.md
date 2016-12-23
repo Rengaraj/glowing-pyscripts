@@ -20,22 +20,23 @@ Make sure following is right in your system.
 
 ## Usage
 
-Linux:
+#### Linux:
 
-By default inside the code `SERIAL_PORT` variable is set to /dev/ttyS0.
+By default inside the code `SERIAL_PORT` variable is set to `/dev/ttyS0`.
 You can modify based on your system serial port connection.
 
  * Open a terminal go to the folder in which `boot-zimage.py` is located
  * Before reseting the board make sure you ready with the command
  
-------
+```
 $ python boot-zimage.py
-------
+```
+
  * Once you give reset immediately you run the above command.
  * If all the setup is correct then you will see succesfull login in to
  Linux Zimage.
  
-Windows:
+#### Windows:
 
 The procedure is same. Instead of terminal open windows command prompt.
 
