@@ -1,10 +1,12 @@
 """
 Parser.py  parse http.log and sum the numbytes each unique IP.
 """
+from collections import defaultdict
 
 def  add_numbytes(data, ip, numbytes):
      """ add numbytes will find unique ip and sum the numbytes. if
-     the ip is not present it will creat the ip as key and assign numbytes
+     the ip is not present it will create the ip as key and assign 0 as
+     default value. defaultdict() helps to do that.
      
      args:
          data - dictionary
@@ -14,21 +16,18 @@ def  add_numbytes(data, ip, numbytes):
      returns:
             None
      """
-     if data.has_key(ip):
-         data[ip] = data[ip] + int(numbytes)
-     else:
-         data[ip] = int(numbytes)
-
+     data[ip] = data[ip] + int(numbytes)
+     
 def main():
      """ open the log and read the file.
-     Discard the first line and split rest of the each line.
+     Discard the first line and split split other lines in to a list.
      Then use only ip and numbytes from each line.
      """
      with open('http.log', 'r') as f:
           data = f.readlines()     
 
      data = data[1:]
-     unique_ip = {}
+     unique_ip = defaultdict(lambda: 0)
 
      for i in data:
           out = i.split()
@@ -36,7 +35,7 @@ def main():
           
           add_numbytes(unique_ip, _ip, numbytes)
 
-     print unique_ip
+     print dict(unique_ip)
 
 if __name__ == "__main__":
      main()
