@@ -1,6 +1,6 @@
 ## Markdown parser
 
-I wriiten this code in to parse markdown headings in
+I wriiten this code to parse markdown headings in
 to markdown task list.
 
 Basically converting like below
@@ -9,9 +9,9 @@ Basically converting like below
 ## <name>    - [ ] <name>
 ```
 
-It will render like this
+It will render like this when we put in github issue
 
-## <name>    - [ ] <name>
+- [ ] <name>
 
 
 ### Usage
