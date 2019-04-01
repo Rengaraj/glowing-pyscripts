@@ -29,22 +29,7 @@ list in stdout. Then we need to copy paste the console output to the github issu
 
 ```
 rengaraj@rengaraj:~/glowing-pyscripts/markdown-parser$ python parse-keynote.py
- - [ ] Wes McKinney
-
- - [ ] Victor Stinner
-
- - [ ] Luciano Ramalho
-
- - [ ] David Beazley
-
- - [ ] Adrian Holovaty
-
- - [ ] Roger Dingledine
-
-  .
-  .
-  .
-  .
+- [ ] <Name1>
 
 till the last line having the heading start with ##
 
