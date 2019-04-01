@@ -19,8 +19,8 @@ It will render like this when we put in github issue
 I have a keynote.txt file, it has heading as name of
 keynote speaker for PyCon India 2019.
 
-We want to create issue with all names in order send invitation for
-keynote speaker.
+We want to create issue with all names in order to send invitation to
+keynote speaker for PyCon India 2019.
 
 Traversing the entire file and copy pasting all the lines I felt boring job.
 
