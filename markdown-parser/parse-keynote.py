@@ -10,15 +10,15 @@ return list with removed markdown headings
        list - function will return stripped lines of all headings
     """
     stripped = []
-    
+    level = len(delimiter)
     for line in lines:
-        if line[0:2] == delimiter:
+        if line[0:level] == delimiter:
             stripped.append(line.strip(delimiter + " "))
     return stripped
 
 
 if __name__ == "__main__":
-    with open("keynote.txt", "r") as key_file:
+    with open("keynote.md", "r") as key_file:
         lines = key_file.readlines()
 
     parsed = parse_line(lines, "##")
